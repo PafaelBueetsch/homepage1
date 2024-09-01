@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - Dein Webdesign Business</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Gleiche Stile wie in der Hauptseite */
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .main-header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(28, 28, 28, 0.9);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, padding 0.3s ease;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .main-header.scrolled {
+            background-color: rgba(28, 28, 28, 1);
+            padding: 0.5rem 2rem;
+        }
+
+        .main-header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .main-header nav ul li a {
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .main-header nav ul li a:hover {
+            background-color: #f39c12;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.5);
+        }
+
+        .about-section {
+            padding: 7rem 2rem;
+            background-color: #2c3e50;
+            text-align: center;
+            animation: fadeInUp 2s ease-out;
+            border-radius: 20px;
+            margin-top: 80px;
+        }
+
+        @media(min-width: 768px) {
+            .about-section {
+                padding: 7rem 5rem;
+            }
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #f39c12;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        .main-footer {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top: 2px solid #f39c12;
+        }
+
+        .main-footer p {
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .main-footer a {
+            color: #f39c12;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="services.html">Dienstleistungen</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h1>Über uns</h1>
+        <p>Unsere Webdesign-Agentur wurde mit der Mission gegründet, innovative, benutzerfreundliche und maßgeschneiderte Websites zu entwickeln. Mit einem Team aus erfahrenen Designern und Entwicklern bieten wir erstklassige Weblösungen, die deine Marke perfekt repräsentieren. Unsere Vision ist es, Unternehmen zu helfen, ihre Online-Präsenz zu maximieren und ihre Ziele zu erreichen.</p>
+        <p>Wir glauben an eine enge Zusammenarbeit mit unseren Kunden, um ihre spezifischen Bedürfnisse zu verstehen und ihnen maßgeschneiderte Lösungen anzubieten, die sowohl ästhetisch ansprechend als auch funktional sind.</p>
+        <p>Unser Engagement für Qualität, Innovation und Kundenzufriedenheit hat uns das Vertrauen vieler Kunden eingebracht. Wir sind stolz darauf, Websites zu entwickeln, die nicht nur gut aussehen, sondern auch reibungslos funktionieren und echte Ergebnisse liefern.</p>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2024 Dein Webdesign Business. Alle Rechte vorbehalten.</p>
+            <p><a href="privacy.html">Datenschutzerklärung</a> | <a href="terms.html">AGB</a></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>

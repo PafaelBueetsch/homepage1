@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Dein Webdesign Business</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Gleiche Stile wie in der Hauptseite */
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .main-header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(28, 28, 28, 0.9);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, padding 0.3s ease;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .main-header.scrolled {
+            background-color: rgba(28, 28, 28, 1);
+            padding: 0.5rem 2rem;
+        }
+
+        .main-header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .main-header nav ul li a {
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .main-header nav ul li a:hover {
+            background-color: #f39c12;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.5);
+        }
+
+        .contact-section {
+            padding: 7rem 2rem;
+            background-color: #2c3e50;
+            text-align: center;
+            animation: fadeInUp 2s ease-out;
+            border-radius: 20px;
+            margin-top: 80px;
+        }
+
+        @media(min-width: 768px) {
+            .contact-section {
+                padding: 7rem 5rem;
+            }
+        }
+
+        .contact-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #f39c12;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: #f39c12;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #f39c12;
+            background-color: #1c1c1c;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            background-color: #f39c12;
+            color: #1c1c1c;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.7);
+            text-transform: uppercase;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .contact-form button:hover {
+            transform: scale(1.1);
+            background-color: #e67e22;
+        }
+
+        .main-footer {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top: 2px solid #f39c12;
+        }
+
+        .main-footer p {
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .main-footer a {
+            color: #f39c12;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="services.html">Dienstleistungen</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h1>Kontakt</h1>
+        <p>Hast du Fragen oder möchtest du mehr über unsere Dienstleistungen erfahren? Kontaktiere uns über das folgende Formular und wir melden uns so schnell wie möglich bei dir.</p>
+        <div class="contact-form">
+            <form action="mailto:deinemail@example.com" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2024 Dein Webdesign Business. Alle Rechte vorbehalten.</p>
+            <p><a href="privacy.html">Datenschutzerklärung</a> | <a href="terms.html">AGB</a></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>
